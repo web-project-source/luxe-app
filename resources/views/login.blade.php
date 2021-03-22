@@ -39,7 +39,6 @@ span {float:right;
 @media (max-width:500px){
 	form {width: 100%;}
 	}
-h2 {padding: 12px;}
 </style>
 </head>
 <body>
@@ -64,7 +63,7 @@ h2 {padding: 12px;}
 <br>
 <br>
 <br>
-<h2>Login Luxe Laundry</h2><br />
+<h2 style="margin-left:20px;">Login Luxe Laundry</h2><br />
 
    @if(isset(Auth::user()->email))
     <script>window.location="successlogin";</script>
@@ -99,6 +98,7 @@ h2 {padding: 12px;}
     </div>
     <div class="form-group">
      <input type="submit" name="login" class="btn btn-primary" value="Login" />
+     <a href="{{ url('registration') }}"> or SIGN UP </a>
     </div>
    </form>
     <br>
