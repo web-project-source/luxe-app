@@ -99,8 +99,8 @@ h2 {padding: 12px;}
     </div>
     <div class="form-group">
      <input type="submit" name="login" class="btn btn-primary" value="Login" />
+     <a href="{{ url('registration') }}"> or SIGN UP </a>
     </div>
-   <a href="{{ url('registration') }}"> or SIGN UP </a>
    </form>
     <br>
     <br>
