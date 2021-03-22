@@ -19,7 +19,7 @@ class Order extends Model
         'rejectQty',
         'userId',
         'statusId',
-        'dateCollection'
+        'dateCollection',
         'dateReturn'
     ];
 
