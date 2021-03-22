@@ -100,6 +100,7 @@ h2 {padding: 12px;}
     <div class="form-group">
      <input type="submit" name="login" class="btn btn-primary" value="Login" />
     </div>
+   <a href="{{ url('registration') }}"> SIGN UP </a>
    </form>
     <br>
     <br>
