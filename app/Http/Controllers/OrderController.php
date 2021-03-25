@@ -47,7 +47,7 @@ class OrderController extends Controller
     }
 
      function vieworders(){
-     if (Auth::user()->role_id = 1){
+     if (Auth::user()->role_id == 1){
      $orders= DB::table('orders_view')->get();
      }
      else {
