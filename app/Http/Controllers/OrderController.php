@@ -51,7 +51,7 @@ class OrderController extends Controller
      $orders= DB::table('orders_view')->get();
      }
      else {
-     $orders= DB::table('orders_view')->where(userId, Auth::user()->id)->get();
+     $orders= DB::table('orders_view')->where('userId', Auth::user()->id)->get();
      }    
      return view('vieworders',['orders' => $orders]);
     }
