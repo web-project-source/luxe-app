@@ -87,8 +87,13 @@ span {float:right;
 <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
 <h2><strong> New Order </strong></h2>
    
-    <label for="service">Service</label>
-    <input type="text" id="productId" name="productId" value = '<?php echo $products[0]->id; ?>'/>
+    <label>Service Id:</label>
+    <?php echo $products[0]->id; ?> </br>
+    </br>
+    <input style="display:none;" name="productId" value = '<?php echo $products[0]->id; ?>'/>
+    <label>Service Name:</label>
+    <?php echo $products[0]->name; ?> </br>
+    </br>
 
     <label for="totalQty">Quantity</label>
     <input type="text" id="totalQty" name="totalQty" placeholder="Quantity...">

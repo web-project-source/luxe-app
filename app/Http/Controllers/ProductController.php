@@ -60,9 +60,8 @@ function viewproducts()
      return view('neworder1');
     }
        function createorder1 (Request $request){
-        $rules = [
-			'productId' => 'required|numeric',			
-			'totalQty' => 'required|numeric', 
+        $rules = [			
+			'totalQty' => 'required|numeric' 
 		];
 		$validator = Validator::make($request->all(),$rules);
 		if ($validator->fails()) {
