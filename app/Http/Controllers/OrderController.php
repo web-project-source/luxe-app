@@ -56,8 +56,7 @@ class OrderController extends Controller
      function edit(Request $request,$id) {
 
      $request->validate([
-                'rejectQty' => 'required|numeric',
-                'statusId' => 'required|numeric',
+                'rejectQty' => 'required|numeric'
                       ]);
      $rejectQty = $request->input('rejectQty');
      $statusId = $request->input('status');
