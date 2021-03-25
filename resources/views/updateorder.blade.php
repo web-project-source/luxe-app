@@ -97,11 +97,12 @@ span {float:right;
     <label for="rejectQty">Reject Quantity:</label>
     <input type="text" id="rejectQty" name="rejectQty" value = '<?php echo $orders[0]->rejectQty; ?>'/>
     
+    <label for="status"> Select Status: </label>
     <div class="col-sm-9">
      <select name="status" id="status" class="form-control">
-     <option value="">--- Select Status ---</option>
+
         @foreach($status as $stat) 
-        <option value="{{ $stat->id }}"> {{ $stat->name }}</option>
+        <option value="{{ $stat->id }}" @if($orders[0]->statusId==$stat->id) selected="selected" @endif> {{ $stat->name }}</option>
         @endforeach
     </select>
     
