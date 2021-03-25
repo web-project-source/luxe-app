@@ -91,11 +91,11 @@ span {float:right;
     <?php echo $products[0]->id; ?> </br>
     </br>
     <input style="display:none;" name="productId" value = '<?php echo $products[0]->id; ?>'/>
-    <label>Service Name:</label>
+    <label>Name:</label>
     <?php echo $products[0]->name; ?> </br>
     </br>
 
-    <label for="totalQty">Quantity</label>
+    <label for="totalQty">Quantity:</label>
     <input type="text" id="totalQty" name="totalQty" placeholder="Quantity...">
 
     <input type="submit" value="Order">
