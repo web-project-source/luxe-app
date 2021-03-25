@@ -105,10 +105,7 @@ span {float:right;
         <option value="{{ $stat->id }}" @if($orders[0]->statusId==$stat->id) selected="selected" @endif> {{ $stat->name }}</option>
         @endforeach
     </select>
-    
-    <label for="rejectQty">Status:</label>
-    <input type="text" id="statusId" name="statusId" value = '<?php echo $orders[0]->statusId; ?>'/>
-    
+     
     <label for="dateCollection">Collection Date:</label>
     <input type="date" id="dateCollection" name="dateCollection" value = '<?php echo $orders[0]->dateCollection; ?>'/>
      <br>
