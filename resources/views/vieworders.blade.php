@@ -104,11 +104,11 @@ span {float:right;
 <tr>
 <td>{{ $order->id }}</td>
 <td>{{ $order->created_at }}</td>
-<td>{{ $order->userId }}</td>
-<td>{{ $order->productId }}</td>
+<td>{{ $order->userName }}</td>
+<td>{{ $order->productName }}</td>
 <td>{{ $order->totalQty }}</td>
 <td>{{ $order->rejectQty }}</td>
-<td>{{ $order->statusId }}</td>
+<td>{{ $order->statusName }}</td>
 <td>{{ $order->dateCollection }}</td>
 <td>{{ $order->dateReturn }}</td>
 <td>{{ $order->updated_at }}</td>
