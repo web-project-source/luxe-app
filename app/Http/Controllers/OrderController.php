@@ -47,10 +47,13 @@ class OrderController extends Controller
     }
 
      function vieworders(){
-
+     if (Auth::user()->role_id=1){
      $orders= DB::table('orders_view')->get();
+     }
+     else {
+     $orders= DB::table('orders_view')->where(userId, Auth::user()->id)->get();
+     }    
      return view('vieworders',['orders' => $orders]);
-
     }
 
      function edit(Request $request,$id) {
