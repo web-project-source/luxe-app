@@ -79,6 +79,7 @@ class OrderController extends Controller
 
     public function show($id) {
     $orders = DB::select('select * from orders where id = ?',[$id]);
-    return view('updateorder',['orders'=>$orders]);
+    $status= DB::table('status')->get();
+    return view('updateorder',['orders'=>$orders], ['status'=>$status]);
    }
 }
