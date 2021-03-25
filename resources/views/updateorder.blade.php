@@ -96,7 +96,15 @@ span {float:right;
     </br>
     <label for="rejectQty">Reject Quantity:</label>
     <input type="text" id="rejectQty" name="rejectQty" value = '<?php echo $orders[0]->rejectQty; ?>'/>
-
+    
+    <div class="col-sm-9">
+     <select name="status" id="status" class="form-control">
+     <option value="">--- Select Status ---</option>
+        @foreach($status as $stat) 
+        <option value="{{ $stat->id }}"> {{ $stat->name }}</option>
+        @endforeach
+    </select>
+    
     <label for="rejectQty">Status:</label>
     <input type="text" id="statusId" name="statusId" value = '<?php echo $orders[0]->statusId; ?>'/>
     
