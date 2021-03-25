@@ -63,13 +63,13 @@ input[type=submit]:hover {
 <h2 ><strong> Contact </strong></h2>
 <h3>Luxe Laundry Ltd</h3>
 <p><strong>Addess:</strong><br>
-  27 Bala Street, Liverpool<br>
-  Post code: L4 2QN</p>
+  Unit 2, The Roundhouse, Harbour Road <br>
+  Post code: PL24 2BB</p>
  
 <p><strong>Phone nr.</strong><br>
-	07785 766 997</p>
+	07702044541</p>
 <p><strong>e-mail</strong><br>
-	nicolae.bulat@gmail.com</p>
+	Info@luxelaundry.co.uk</p>
 </form>
 	<div class="copyright">&copy;2021 - <strong>Luxe Laundry</strong></div>
 </div>
