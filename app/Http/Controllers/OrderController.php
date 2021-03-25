@@ -48,8 +48,8 @@ class OrderController extends Controller
 
      function vieworders(){
 
-     $orders= DB::table('orders')->get();
-     return view('orders_view',['orders' => $orders]);
+     $orders= DB::table('orders_view')->get();
+     return view('vieworders',['orders' => $orders]);
 
     }
 
