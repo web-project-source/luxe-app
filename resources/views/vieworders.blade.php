@@ -97,7 +97,6 @@ span {float:right;
 <td>Status</td>
 <td>Collection Date</td>
 <td>Return Date</td>
-<td>Update</td>
 <td>Edit</td>
 </tr>
 @foreach ($orders as $order)
@@ -111,7 +110,6 @@ span {float:right;
 <td>{{ $order->statusName }}</td>
 <td>{{ $order->dateCollection }}</td>
 <td>{{ $order->dateReturn }}</td>
-<td>{{ $order->updated_at }}</td>
 <td><a href = 'edit/{{ $order->id }}'>Update</a></td>
 </tr>
 @endforeach
