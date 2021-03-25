@@ -60,7 +60,7 @@ class OrderController extends Controller
                 'statusId' => 'required|numeric',
                       ]);
      $rejectQty = $request->input('rejectQty');
-     $statusId = $request->input('statusId');
+     $statusId = $request->input('status');
      $dateCollection = $request->input('dateCollection');
      $dateReturn = $request->input('dateReturn');
 
