@@ -12,40 +12,6 @@ use Illuminate\Support\Facades\DB;
 class OrderController extends Controller
 {
 
-    function neworder()
-    {
-     return view('neworder');
-    }
-   public function createorder(Request $request){
-        $rules = [
-			'productId' => 'required|numeric',			
-			'totalQty' => 'required|numeric',
-                        'rejectQty' => 'required|numeric',
-		];
-		$validator = Validator::make($request->all(),$rules);
-		if ($validator->fails()) {
-			return redirect('neworder')
-			->withInput()
-			->withErrors($validator);
-		}
-		else{
-            $data = $request->input();
-			try{
-				$order = new Order;
-                                $order->productId = $data['productId'];
-                                $order->userId = Auth::user()->id;
-                                $order->totalQty = $data['totalQty'];
-                                $order->rejectQty = 0;
-                                $order->statusId = 1;
-				$order->save();
-				return redirect('neworder')->with('status',"Insert successfully");
-			}
-			catch(Exception $e){
-				return redirect('neworder')->with('failed',"operation failed");
-			}
-		}
-    }
-
      function vieworders(){
      if (Auth::user()->role_id == 1){
      $orders= DB::table('orders_view')->get();

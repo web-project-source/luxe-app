@@ -53,19 +53,19 @@ function viewproducts()
 
     public function show($id) {
     $products = DB::select('select * from products where id = ?',[$id]);
-    return view('neworder1',['products'=>$products]);
+    return view('neworder',['products'=>$products]);
     }
-       function neworder1()
+       function neworder()
     {
-     return view('neworder1');
+     return view('neworder');
     }
-       function createorder1 (Request $request){
+       function createorder (Request $request){
         $rules = [			
 			'totalQty' => 'required|numeric' 
 		];
 		$validator = Validator::make($request->all(),$rules);
 		if ($validator->fails()) {
-			return redirect('neworder1')
+			return redirect('neworder')
 			->withInput()
 			->withErrors($validator);
 		}

@@ -1,9 +1,6 @@
-<!doctype html>
-<html lang="en-US">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title> Luxe Laundry </title>
-<link href="{{ URL::asset('css/Template.css') }}" rel="stylesheet" type="text/css">
+@extends('layout')
+
+@section('content')
 
 <script>
 function startTime() {
@@ -22,31 +19,9 @@ function checkTime(i) {
   return i;
 }
 </script>
-</head>
-<body onload="startTime()">
-<!-- Main Container -->
-<div class="container">
-  <!-- Navigation -->
-<header>
-	<h2 class="logo">Luxe Laundry</h2>
-  <nav>
-      <ul>
-                <li><a href="{{ url('login') }}"> LOG IN</a></li>
-		<li><a href="{{ url('registration') }}"> SIGN UP</a></li>
-		<li><a href="{{ url('viewproducts') }}">SERVICES</a></li>
-		<li><a href="{{ url('vieworders') }}">ORDERS</a></li>
-                <li><a href="{{ url('newproduct') }}">ADD SERVICE</a></li>
-                <li> <a href= "{{ url('contact') }}" >CONTACT</a></li>
-		<li><a href="{{ url('feedback') }}"> FEEDBACK</a></li>
-      </ul>
-    </nav>
-</header>
-<br>
-<br>
-<br>
-<br>
-	<div style="padding-left: 20px; font-weight: bolder;" class="col1">
-	  <div align="left"  id="txt"></div>
+
+<div style="padding-left: 20px; font-weight: bolder;" class="col1">
+ <div align="left"  id="txt"></div>
 
 <h1> Welcome to Luxe Laundry! These are our services:</h1>
 	</div>
@@ -76,9 +51,6 @@ function checkTime(i) {
 </tr>
 @endforeach
 </table>
+<br>
   </div>
-<div class="copyright">&copy;2021 - <strong>Luxe Laundry</strong></div>
-</div>
-<!-- Main Container Ends -->
-</body>
-</html>
+@endsection

@@ -26,12 +26,10 @@ Route::post('edit/{id}','App\Http\Controllers\OrderController@edit')->middleware
 Route::get('edit/{id}','App\Http\Controllers\OrderController@show')->middleware('auth');
 Route::get('viewproducts','App\Http\Controllers\ProductController@viewproducts')->middleware('auth');
 Route::get('editproduct/{id}','App\Http\Controllers\ProductController@show')->middleware('auth');
-Route::get('neworder1', 'App\Http\Controllers\ProductController@neworder1')->middleware('auth');
-Route::post('createorder1','App\Http\Controllers\ProductController@createorder1')->middleware('auth');
+Route::get('neworder', 'App\Http\Controllers\ProductController@neworder')->middleware('auth');
+Route::post('createorder','App\Http\Controllers\ProductController@createorder')->middleware('auth');
 
 Route::group(['middleware' => ['RolesAuth']], function () { 
-Route::get('neworder', 'App\Http\Controllers\OrderController@neworder')->middleware('auth');
-Route::post('createorder','App\Http\Controllers\OrderController@createorder')->middleware('auth');
 Route::get('newproduct', 'App\Http\Controllers\ProductController@newproduct')->middleware('auth');
 Route::post('createproduct','App\Http\Controllers\ProductController@createproduct')->middleware('auth');
 });
